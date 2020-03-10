@@ -1,11 +1,11 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties("configuration")
-public class Configuration {
+public class Settings {
 	
 	private String projectName;
 

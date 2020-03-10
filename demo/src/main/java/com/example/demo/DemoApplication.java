@@ -6,8 +6,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
+import com.example.demo.config.Settings;
+
 @SpringBootApplication
 public class DemoApplication {
+	
+	// Configuration
 	
 	@Value("${configuration.projectName}")
 	void setProjectName(String projectName) {
@@ -20,7 +24,7 @@ public class DemoApplication {
 	}
 	
 	@Autowired
-	void setConfiguration(Configuration conf) {
+	void setConfiguration(Settings conf) {
 		System.out.println("setting configuration: " + conf.getProjectName());
 	}
 

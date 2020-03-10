@@ -1,2 +1,9 @@
+# to expose actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 configuration:
    projectName: evrim
