@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+<title>Test Page</title>
+</head>
+<body>
+	<h1 layout:fragment="header">Header</h1>
+	<div layout:fragment="content">
+		<p>Content</p>
+		<p th:each="i : ${#numbers.sequence( 1, 5)}" th:text="${i}"></p>
+	</div>
+</body>
+</html>
