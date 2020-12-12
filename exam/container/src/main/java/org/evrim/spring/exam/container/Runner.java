@@ -1,7 +1,8 @@
 package org.evrim.spring.exam.container;
 
 
-import org.evrim.spring.exam.container.beans.MyBean;
+import org.evrim.spring.exam.container.beans.UserContext;
+import org.evrim.spring.exam.container.service.IService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Runner {
@@ -12,9 +13,11 @@ public class Runner {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
         context.registerShutdownHook();
 
-        MyBean bean = context.getBean(MyBean.class);
+        IService service = context.getBean(IService.class);
 
-        System.out.println("Name:" + bean.getName());
+        String response = service.process("request");
+
+        System.out.println("Response:" + response);
 
     }
 }
