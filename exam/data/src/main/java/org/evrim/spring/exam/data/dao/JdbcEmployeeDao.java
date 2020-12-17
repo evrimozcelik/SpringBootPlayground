@@ -12,13 +12,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Repository
-public class EmployeeDao {
+public class JdbcEmployeeDao {
 
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
-    private void setJdbcTemplate(DataSource dataSource) {
-        jdbcTemplate = new JdbcTemplate(dataSource);
+    private void setJdbcTemplate(DataSource employeeDataSource) {
+        jdbcTemplate = new JdbcTemplate(employeeDataSource);
     }
 
     public List<String> getEmployeeEmails() {

@@ -1,14 +1,10 @@
 package org.evrim.spring.exam.data.ds;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @ToString
 public class Employee {

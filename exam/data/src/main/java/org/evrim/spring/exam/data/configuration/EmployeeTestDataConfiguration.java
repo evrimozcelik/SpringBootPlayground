@@ -1,5 +1,6 @@
 package org.evrim.spring.exam.data.configuration;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,18 +15,19 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 @Configuration
-public class TestDataConfiguration {
+public class EmployeeTestDataConfiguration {
 
-    @Value("classpath:/db-schema.sql")
+    @Value("classpath:/employee-schema.sql")
     private Resource schema;
 
-    @Value("classpath:/db-test-data.sql")
+    @Value("classpath:/employee-test-data.sql")
     private Resource data;
 
     @Bean
-    DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
+    @Autowired
+    DataSourceInitializer dataSourceInitializer(DataSource employeeDataSource) {
         DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
-        dataSourceInitializer.setDataSource(dataSource);
+        dataSourceInitializer.setDataSource(employeeDataSource);
         dataSourceInitializer.setDatabasePopulator(databasePopulator());
         return  dataSourceInitializer;
     }
