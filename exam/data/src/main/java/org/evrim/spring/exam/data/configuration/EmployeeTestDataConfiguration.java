@@ -29,7 +29,7 @@ public class EmployeeTestDataConfiguration {
         DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
         dataSourceInitializer.setDataSource(employeeDataSource);
         dataSourceInitializer.setDatabasePopulator(databasePopulator());
-        return  dataSourceInitializer;
+        return dataSourceInitializer;
     }
 
     private DatabasePopulator databasePopulator() {

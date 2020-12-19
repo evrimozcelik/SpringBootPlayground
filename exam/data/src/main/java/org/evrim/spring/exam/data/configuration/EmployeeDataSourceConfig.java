@@ -10,24 +10,24 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class EmployeeDataSourceConfig {
 
-    @Bean
-    public DataSource employeeDataSource() {
-        BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
-        dataSource.setUrl("jdbc:hsqldb:mem:localhost");
-        return dataSource;
-    }
-
-
-    @Bean
-    @Autowired
-    public PlatformTransactionManager employeeTransactionManager(DataSource employeeDataSource) {
-        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(employeeDataSource);
-        transactionManager.setDefaultTimeout(1000);
-        return transactionManager;
-    }
+//    @Bean
+//    public DataSource employeeDataSource() {
+//        BasicDataSource dataSource = new BasicDataSource();
+//        dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
+//        dataSource.setUrl("jdbc:hsqldb:mem:localhost");
+//        return dataSource;
+//    }
+//
+//
+//    //@Bean
+//    @Autowired
+//    public PlatformTransactionManager employeeTransactionManager(DataSource employeeDataSource) {
+//        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(employeeDataSource);
+//        transactionManager.setDefaultTimeout(1000);
+//        return transactionManager;
+//    }
 
 }

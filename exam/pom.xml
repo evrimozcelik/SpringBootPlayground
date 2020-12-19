@@ -13,6 +13,7 @@
         <module>container</module>
         <module>aop</module>
         <module>data</module>
+        <module>data-springboot</module>
     </modules>
 
     <properties>
