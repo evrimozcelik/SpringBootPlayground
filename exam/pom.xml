@@ -14,6 +14,14 @@
         <module>aop</module>
         <module>data</module>
         <module>data-springboot</module>
+        <module>aop2</module>
+        <module>aop3</module>
+        <module>data2-jdbc</module>
+        <module>data2-springboot</module>
+        <module>springboot</module>
+        <module>springboot-autoconfig-hsql</module>
+        <module>springboot-autoconfig-mysql</module>
+        <module>springboot-web</module>
     </modules>
 
     <properties>

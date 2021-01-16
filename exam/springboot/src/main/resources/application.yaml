@@ -1,0 +1,11 @@
+app:
+  propertyB: valueB
+  propertyE: valueE
+
+---
+spring:
+  profile: dev
+
+app:
+  propertyE: valueE-dev1
+  propertyF: valueF-dev1

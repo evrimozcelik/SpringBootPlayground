@@ -29,7 +29,9 @@ public class Aspects {
     Object aroundServices(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("aroundServices: " + proceedingJoinPoint.getSignature());
         Object[] args = proceedingJoinPoint.getArgs();
-        Arrays.stream(args).filter(s -> s instanceof MyBean).forEach(b -> updateMyBean((MyBean) b));
+        Arrays.stream(args)
+                .filter(s -> s instanceof MyBean)
+                .forEach(b -> updateMyBean((MyBean) b));
         return proceedingJoinPoint.proceed(args);
     }
 
