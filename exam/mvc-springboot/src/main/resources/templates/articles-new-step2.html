@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <title>articles-new2</title>
+</head>
+<body>
+
+    <header th:insert="header.html :: header"></header>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <form method="post" action="#" th:object="${articlePart2}" th:action="@{/articles/new/step2}">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="body">Body</label>
+                        <input type="text" class="form-control" id="body" th:field="*{body}"
+                               th:classappend="${#fields.hasErrors('body')} ? 'is-invalid'">
+                        <div class="invalid-feedback" th:errors="*{body}"></div>
+                    </div>
+                </div>
+
+                <a th:href="@{/articles/new/step1}">Go back</a>
+
+                <button type="submit" class="btn btn-primary">Next</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

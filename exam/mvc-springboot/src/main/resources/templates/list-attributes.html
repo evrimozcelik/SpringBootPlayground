@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <title>articles-index</title>
+</head>
+<body>
+
+    <header th:insert="header.html :: header"></header>
+
+    <div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>List Attributes</h3>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <h5 class="card-title">First Name: </h5>
+            <p class="card-text" th:text="${firstname}"></p>
+
+            <h5 class="card-title">Last Name: </h5>
+            <p class="card-text" th:text="${lastname}"></p>
+
+            <h5 class="card-title">City: </h5>
+            <p class="card-text" th:text="${city}"></p>
+
+        </div>
+    </div>
+
+</body>
+</html>
